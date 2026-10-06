@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan HYROX · Adriana Lizarazo</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F4F8;--card:#fff;--ink:#16202B;--mut:#5E6B7A;--line:#DADFE8;--acc:#3B4BDB;--on:#fff;--ok:#12926B;--warn:#B87708;--soft:#E8EBFB;--hero:#16202B;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F141B;--card:#18202A;--ink:#E8ECF2;--mut:#93A1B3;--line:#2A3441;--acc:#8A97FF;--on:#0F141B;--ok:#3FD1A0;--warn:#F0B84A;--soft:#222B45;--hero:#0A0E13}}
+:root[data-theme="dark"]{--bg:#0F141B;--card:#18202A;--ink:#E8ECF2;--mut:#93A1B3;--line:#2A3441;--acc:#8A97FF;--on:#0F141B;--ok:#3FD1A0;--warn:#F0B84A;--soft:#222B45;--hero:#0A0E13}
+*,*:before,*:after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Barlow,system-ui,sans-serif}
+h1,h2,h3{font-family:'Barlow Condensed','Arial Narrow',sans-serif;margin:0;line-height:1.1}
+.wrap{max-width:760px;margin:0 auto;padding:0 14px 60px}
+.hero{background:var(--hero);color:#fff;padding:22px 14px 20px}
+.hero .in{max-width:760px;margin:0 auto}
+.hero h1{font-size:clamp(26px,7vw,40px);font-weight:700}
+.hero p{margin:6px 0 0;color:#B9C3D0;font-size:14px}
+section.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:14px}
+h2{font-size:24px;font-weight:700;margin-bottom:10px}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.mrow{display:grid;grid-template-columns:70px 1fr 90px;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.mrow:first-of-type{border-top:0}
+input,select,textarea,button{font:inherit;color:var(--ink)}
+input[type=text],input[type=number],select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 10px;min-height:42px}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+button{cursor:pointer;border:0;border-radius:8px;padding:10px 16px;font-weight:600;background:var(--acc);color:var(--on);min-height:42px}
+button.ghost{background:var(--soft);color:var(--ink)}
+.pace{font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+.bar{height:12px;background:var(--soft);border-radius:6px;overflow:hidden;margin:8px 0 4px}
+.bar i{display:block;height:100%;background:var(--acc);width:0;transition:width .4s}
+.mut{color:var(--mut);font-size:14px}
+.big{font-family:'Barlow Condensed',sans-serif;font-size:34px;font-weight:700}
+.up{color:var(--warn)}.down{color:var(--ok)}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:2px 0 6px;scrollbar-width:thin}
+.tab{flex:0 0 auto;background:var(--soft);color:var(--ink);padding:8px 14px;border-radius:8px;font-weight:600;white-space:nowrap}
+.tab[aria-selected=true]{background:var(--acc);color:var(--on)}
+.tab .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-left:6px}
+.badge{display:inline-block;background:var(--soft);border-radius:6px;padding:2px 8px;font-size:13px;font-weight:600;margin-left:6px}
+.ex{border-top:1px solid var(--line);padding:12px 0}
+.ex:first-child{border-top:0}
+.ex h3{font-size:20px;font-weight:600}
+.tgt{font-weight:600;margin-top:2px}
+.note{color:var(--mut);font-size:14px;margin:4px 0 8px}
+.sets{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.sets label{display:flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 10px;min-height:42px}
+.sets input{width:20px;height:20px;accent-color:var(--acc)}
+.inp{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.inp label{font-size:13px;color:var(--mut);display:block}
+.done{opacity:.75}
+#toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s}
+#toast.show{opacity:1}
+.wk{display:grid;gap:6px}
+</style></head>
+<body>
+<div class="hero"><div class="in">
+<h1>Plan de Entrenamiento Personalizado - Adriana Lizarazo (Peso Base: 78 kg)</h1>
+<p>Macrociclo de 16 semanas · Recomposición, running hasta 8 km @ 5:00 min/km y HYROX</p>
+</div></div>
+<div class="wrap">
+
+<section class="box" id="metrics"><h2>Evaluación de running</h2>
+<div class="mut" style="margin-bottom:6px">Escribe el tiempo como mm:ss (ej. 5:30 o 27:40). El ritmo se calcula solo.</div>
+<div id="mrows"></div>
+<div class="bar"><i id="pbar"></i></div>
+<div class="row" style="justify-content:space-between"><span id="ptxt" class="mut">Registra al menos un tiempo.</span><button id="msave">Actualizar métricas</button></div>
+</section>
+
+<section class="box"><h2>Peso corporal</h2>
+<div class="row"><div><div class="big" id="wcur">78.0 kg</div><div class="mut" id="wdelta">Base: 78 kg</div></div>
+<div style="flex:1;min-width:150px"><input type="number" id="winp" step="0.1" min="30" max="200" placeholder="Peso actual (kg)" aria-label="Peso actual en kg"></div>
+<button id="wsave">Registrar peso</button></div>
+<div class="mut" id="whist" style="margin-top:8px"></div>
+</section>
+
+<section class="box"><h2>Plan</h2>
+<div class="tabs" id="mtabs" role="tablist" aria-label="Meses"></div>
+<div class="tabs" id="wtabs" role="tablist" aria-label="Semanas"></div>
+<div class="tabs" id="dtabs" role="tablist" aria-label="Días"></div>
+<div id="focus" class="mut" style="margin:6px 0 0"></div>
+</section>
+
+<section class="box" id="session"></section>
+</div>
+<div id="toast" role="status"></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const KEY='adriana_plan_v1';
+let DB={metrics:{init:null,cur:{}},weights:[],sessions:{}};
+try{const r=localStorage.getItem(KEY);if(r)DB=Object.assign(DB,JSON.parse(r))}catch(e){}
+const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(DB));return true}catch(e){return false}};
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)};
+
+/* ---------- Tiempos ---------- */
+const parseT=s=>{if(!s)return null;const p=String(s).trim().split(':').map(Number);if(p.length<2||p.length>3||p.some(x=>isNaN(x)||x<0))return null;return p.length==2?p[0]*60+p[1]:p[0]*3600+p[1]*60+p[2]};
+const fmt=s=>{s=Math.round(s);const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(x).padStart(2,'0')};
+const KM=[1,3,5,8];
+const LBL={1:'1 km Time',3:'3 km Time',5:'5 km Time',8:'8 km Time (meta)'};
+function drawMetrics(){
+  const c=DB.metrics.cur||{};
+  $('#mrows').innerHTML=KM.map(k=>`<div class="mrow"><strong>${k} km</strong><input type="text" inputmode="numeric" data-km="${k}" placeholder="${LBL[k]}" aria-label="${LBL[k]}" value="${esc(c[k]||'')}"><span class="pace" id="pc${k}">–</span></div>`).join('');
+  updMetrics();
+}
+function updMetrics(){
+  let best=null;
+  KM.forEach(k=>{
+    const v=document.querySelector(`[data-km="${k}"]`).value,t=parseT(v),el=$('#pc'+k);
+    if(!t){el.textContent='–';return}
+    const p=t/k;el.textContent=fmt(p)+' /km';best={k,p};
+  });
+  if(!best){$('#pbar').style.width='0';$('#ptxt').textContent='Registra al menos un tiempo.';return}
+  const idx=Math.min(1,300/best.p)*Math.min(1,best.k/8),pct=Math.round(idx*100);
+  $('#pbar').style.width=pct+'%';
+  const gap=best.p-300;
+  $('#ptxt').textContent=`Progreso hacia 8 km @ 5:00: ${pct}% · `+(gap>0?`faltan ${Math.round(gap)} s/km de ritmo`:'ritmo objetivo alcanzado')+(best.k<8?` · distancia ${best.k}/8 km`:'');
+}
+$('#mrows').addEventListener('input',updMetrics);
+$('#msave').onclick=()=>{
+  const cur={};KM.forEach(k=>{const v=document.querySelector(`[data-km="${k}"]`).value.trim();if(v&&parseT(v)!=null)cur[k]=v});
+  if(!Object.keys(cur).length)return toast('Ingresa un tiempo válido (mm:ss)');
+  if(!DB.metrics.init)DB.metrics.init=Object.assign({},cur);
+  DB.metrics.cur=cur;toast(persist()?'Métricas guardadas':'No se pudo guardar');
+};
+
+/* ---------- Peso ---------- */
+function drawWeight(){
+  const w=DB.weights,last=w.length?w[w.length-1].kg:78,d=last-78;
+  $('#wcur').textContent=last.toFixed(1)+' kg';
+  $('#wdelta').innerHTML=`Base 78 kg · variación <strong class="${d>0?'up':'down'}">${d>0?'+':''}${d.toFixed(1)} kg</strong>`;
+  $('#whist').textContent=w.slice(-5).reverse().map(x=>`${x.d}: ${x.kg} kg`).join('  |  ');
+}
+$('#wsave').onclick=()=>{
+  const v=parseFloat($('#winp').value);if(!(v>30&&v<200))return toast('Ingresa un peso válido');
+  DB.weights.push({d:new Date().toLocaleDateString('es-CO'),kg:v});$('#winp').value='';
+  drawWeight();toast(persist()?'Peso registrado':'No se pudo guardar');
+};
+
+/* ---------- Generador del plan ---------- */
+const MES=[
+ ['Mes 1 · Acumulación y técnica base','Adaptación anatómica, cadera y rodilla fuertes, aeróbico suave y técnica de carrera.'],
+ ['Mes 2 · Intensificación y ritmo','Intervalos al ritmo de 5:00/km, hipertrofia RIR 2-3 y primeras estaciones HYROX.'],
+ ['Mes 3 · HYROX + resistencia','Tirada larga de 5 a 6 km, más volumen en estaciones y fuerza.'],
+ ['Mes 4 · Pico y realización','Simulaciones a 5:00/km, densidad HYROX y prueba final de 8 km en la semana 16.']];
+const REPS=['12-15 reps (RIR 3-4)','8-12 reps (RIR 2-3)','8-10 reps (RIR 2-3)','8-10 reps (RIR 2)'];
+const LR=[3,3.5,4,3,4,4.5,5,4,5,5.5,6,5,6,6.5,7,8];
+const Q=[['4×400 m ritmo cómodo (RPE 6), pausa 90″ caminando',4],['5×400 m ritmo cómodo (RPE 6), pausa 90″',5],['6×400 m ritmo cómodo (RPE 6), pausa 90″',6],['3×400 m suaves (descarga)',3],
+['5×600 m @ 5:00/km (RPE 7), pausa 90″ trotando',5],['6×600 m @ 5:00/km, pausa 90″',6],['4×800 m @ 5:00/km, pausa 2′',4],['4×600 m @ 5:00/km (descarga)',4],
+['3×1000 m @ 5:00/km, pausa 2′',3],['4×1000 m @ 5:00/km, pausa 2′',4],['3×1200 m @ 5:00/km, pausa 2′',3],['3×800 m @ 5:00/km (descarga)',3],
+['4×1000 m @ 5:00/km, pausa 90″',4],['3×1600 m @ 5:00/km, pausa 2′',3],['2×2400 m @ 5:00/km, pausa 3′',2],['3×1000 m @ 5:00/km activación, pausa 2′',3]];
+const DAYS=['Fuerza tren inferior + Zona 2','Running calidad','Fuerza tren superior + core','HYROX específico','Full body / potencia + rodaje largo'];
+const VENT={n:'Calentamiento ventilatorio progresivo (10-15 min)',s:1,t:'Caminata 3′ → trote muy suave 5′ → 3 progresiones de 30″ a ritmo moderado',note:'Respiración rítmica: inhala 3 pasos / exhala 2 pasos (nasal al inicio). Si aparece opresión o sensación de falta de aire, baja a caminata y respira lento. Lleva tu medicación de rescate si te fue indicada.'};
+const BANDS='Rodilla externa: pelvis estable, rodilla alineada con el 2.º dedo, sin colapso hacia adentro.';
+
+function build(w,d){
+  const m=Math.floor((w-1)/4),dl=[4,8,12].includes(w),r=REPS[m];
+  const big=Math.max(2,(m?4:3)-(dl?1:0)),acc=Math.max(2,3-(dl?1:0));
+  const E=(n,s,t,note)=>({n,s,t,note:note||''});
+  if(d==1)return[
+    E('Activación de glúteo medio',2,'12/lado · clamshell con banda + caminata lateral','Mini banda sobre rodillas. '+BANDS),
+    E(['Prensa de piernas (pies altos y separados)','Sentadilla goblet','Sentadilla goblet pesada, tempo 3-1-1','Sentadilla goblet pesada, tempo 3-1-1'][m],big,r,'Mancuerna vertical con ambas manos, muñecas neutras. Si molesta, usa prensa.'),
+    E('Hip thrust (barra o máquina)',big,r,'Pausa de 1″ arriba. Almohadilla en la barra; no cargues con las muñecas.'),
+    E('Peso muerto rumano con mancuernas + straps',acc,r,'Straps obligatorios, agarre neutro.'),
+    E('Step-up lateral al cajón',acc,'10/lado',BANDS),
+    E('Abducción de cadera en máquina',3,'15-20 reps (RIR 2)'),
+    ...(m?[E('Sled push pesado',3,'4×12,5 m · carga alta, pasos cortos','Refuerza la estación de HYROX. Postes bajos, sin palma plana.')]:[]),
+    E('Cardio Zona 2 (caminadora inclinada)',1,(15+m*3)+'-20 min · RPE 4','Debes poder hablar frases completas.')];
+  if(d==2){const q=Q[w-1];return[VENT,
+    E('Drills de técnica',3,'20 m · skipping A, talones al glúteo, cadencia 170-180 ppm','Paso corto, aterrizaje bajo el centro de masa, tronco alto.'),
+    E('Serie principal: '+q[0],q[1],'1 casilla por repetición','Ritmo de la serie = ritmo objetivo. Sin llegar al límite respiratorio.'),
+    E('Plancha lateral',2,'20-30″/lado','Refuerzo de cadera y banda iliotibial.'),
+    E('Vuelta a la calma + movilidad',1,'5′ caminata + foam roller suave en glúteo y cara lateral del muslo','Evita rodar directamente sobre la zona dolorosa de la rodilla.')]}
+  if(d==3)return[
+    E('Movilidad escapular y de muñeca',1,'5′ · círculos suaves, sin carga en extensión'),
+    E('Press inclinado con mancuernas (agarre neutro)',big,r,'Palmas enfrentadas, muñeca alineada con el antebrazo.'),
+    E('Remo con mancuerna apoyado + straps',big,r,'Straps obligatorios.'),
+    E('Jalón al pecho agarre neutro (V) + straps',acc,r),
+    E('Press de hombro con mancuernas (agarre martillo)',acc,'10-12 reps (RIR 2-3)'),
+    E('Face pull con cuerda',3,'15 reps'),
+    E('Wall balls técnica',3,(8+m*2)+' reps · pelota 4-6 kg','Sentadilla profunda y lanzamiento con piernas. Si molesta la muñeca: thruster con mancuerna goblet.'),
+    E('Dead bug',3,'10/lado'),E('Pallof press',3,'10/lado'),
+    E('Plancha sobre antebrazos',3,(30+m*5)+'-45″','Antebrazos apoyados: sin carga en la muñeca.'),
+    E('Control respiratorio diafragmático',1,'5′ · inhala nasal 4″, exhala con labios fruncidos 6″','Practica el ritmo antes de los días de carrera.')];
+  if(d==4){const f=dl?.75:1,q=n=>Math.max(5,Math.round(n*f/5)*5),rp=n=>Math.max(4,Math.round(n*f)),run=q([200,300,400,500][m]),pc=['6:00-6:30','5:45-6:00','5:30-5:45','5:15-5:30'][m],sp=Math.max(2,[2,2,3,4][m]-(dl&&m>1?1:0)),sled=sp+'×12,5 m',pre=' · antes: correr '+run+' m @ '+pc+' /km';
+    const L=[VENT];
+    if(m<2)L.push(E('Técnica de estaciones',1,'10′ · posición del trineo, sentadilla de wall ball, paso atrás del burpee','Aprende cada movimiento con carga ligera antes del circuito.'));
+    L.push(
+    E('1 · SkiErg '+q([350,500,700,850][m])+' m',1,'RPE 6-7'+pre,'Agarre neutro en las manijas; empuja con cadera y core. Registra el tiempo.'),
+    E('2 · Sled push '+sled,1,'Carga moderada'+pre,'Postes bajos, tronco inclinado ~45°, pasos cortos. Evita apoyar la palma plana. Anota los kg.'),
+    E('3 · Sled pull '+sled+' + straps',1,'Carga moderada'+pre,'Straps obligatorios. Tira con piernas y cadera, no con las muñecas.'),
+    E('4 · Burpee broad jump modificado ×'+rp([8,16,28,40][m]),1,'Apoyo en mancuernas o paraletas'+pre,'Sin palmas planas: paso atrás, vuelve y salta al frente. Aterrizaje suave y rodilla estable.'),
+    E('5 · Remo '+q([350,500,700,850][m])+' m',1,'RPE 6-7'+pre,'Piernas → cadera → brazos. Muñeca recta.'),
+    E('6 · Farmers carry '+q([50,100,150,200][m])+' m + straps',1,'2 mancuernas/kettlebells (12-16 kg)'+pre,'Agarre neutro, hombros abajo, pasos cortos.'),
+    E('7 · Zancadas con sandbag '+q([25,50,75,100][m])+' m',1,'Sandbag 6-10 kg al pecho o en hombros'+pre,'Sin carga en las muñecas. '+BANDS),
+    E('8 · Wall balls ×'+rp([20,35,50,75][m]),1,'Pelota 4 kg, series de 10-15'+pre,'Sentadilla profunda y lanzamiento con piernas. Si molesta la muñeca: thruster con mancuerna goblet.'),
+    E('Vuelta a la calma',1,'8′ caminata + movilidad de cadera y respiración diafragmática'));
+    if(dl)L[L.length-1].note='Semana de descarga: −25% de volumen en todas las estaciones.';
+    return L}
+  if(w==16)return[VENT,E('PRUEBA FINAL: 8 km continuos a 5:00 /km (40:00 total)',1,'Meta del macrociclo','Primeros 2 km a 5:05, luego mantén 5:00. Registra el tiempo en el módulo de evaluación.'),E('Vuelta a la calma',1,'10′ caminata + movilidad de cadera')];
+  const km=LR[w-1];
+  return[VENT,
+    E('Salto al cajón bajo (30-40 cm)',3,'5 reps · aterrizaje suave y silencioso','Potencia y tolerancia al impacto.'),
+    E('Peso muerto con barra hexagonal + straps',big,r,'Agarre neutro del propio equipo.'),
+    m?E('Zancadas con sandbag',acc,'20 m · sandbag 6-10 kg al pecho','Sin carga en las muñecas. '+BANDS):E('Zancada reversa con mancuernas (agarre neutro)',acc,'10/lado',BANDS),
+    E('Remo unilateral con straps',acc,'12 reps'),
+    E('Rodaje largo aeróbico: '+km+' km'+(dl?' (semana de descarga)':''),1,'Zona 2 · RPE 4-5, conversacional','Pausas de caminata permitidas. Superficie blanda si es posible. Aumento semanal ≤ 10%.')];
+}
+
+/* ---------- Estado e interfaz ---------- */
+const S={w:1,d:1};let draft={};
+const key=()=>`w${S.w}d${S.d}`;
+function loadDraft(){const sv=DB.sessions[key()];draft=sv?JSON.parse(JSON.stringify(sv)):{c:{},w:{},r:{},p:{},feel:'Sin molestia',notes:''}}
+function tabs(){
+  const m=Math.floor((S.w-1)/4);
+  $('#mtabs').innerHTML=[0,1,2,3].map(i=>`<button class="tab" role="tab" aria-selected="${i==m}" data-m="${i}">Mes ${i+1}</button>`).join('');
+  $('#wtabs').innerHTML=[1,2,3,4].map(i=>{const w=m*4+i,n=[1,2,3,4,5].filter(d=>DB.sessions[`w${w}d${d}`]).length;return `<button class="tab" role="tab" aria-selected="${w==S.w}" data-w="${w}">Sem ${w}${n?`<span class="dot" title="${n}/5 guardadas"></span>`:''}</button>`}).join('');
+  $('#dtabs').innerHTML=[1,2,3,4,5].map(d=>`<button class="tab" role="tab" aria-selected="${d==S.d}" data-d="${d}">Día ${d}${DB.sessions[`w${S.w}d${d}`]?'<span class="dot"></span>':''}</button>`).join('');
+  $('#focus').innerHTML=`<strong>${MES[m][0]}</strong>${[4,8,12].includes(S.w)?'<span class="badge">Semana de descarga</span>':''}${S.w==16?'<span class="badge">Semana de prueba</span>':''}<br>${MES[m][1]}`;
+}
+function session(){
+  const ex=build(S.w,S.d);
+  const FE=['Sin molestia','Molestia leve rodilla','Molestia leve muñeca','Dificultad respiratoria'];
+  $('#session').innerHTML=`<h2>Semana ${S.w} · Día ${S.d}: ${DAYS[S.d-1]}</h2><div class="mut">60-75 min · ${S.d==4?'Gym HYROX':'Gym cercano / pista'}</div>`+
+  ex.map((e,i)=>{const c=draft.c[i]||[];
+    return `<div class="ex ${c.filter(Boolean).length==e.s?'done':''}" data-i="${i}"><h3>${esc(e.n)}</h3><div class="tgt">${e.s>1?e.s+' series · ':''}${esc(e.t)}</div>${e.note?`<div class="note">${esc(e.note)}</div>`:''}
+    <div class="sets">${Array.from({length:e.s},(_,j)=>`<label><input type="checkbox" data-k="c" data-j="${j}" ${c[j]?'checked':''} aria-label="Serie ${j+1}">${e.s>1?'S'+(j+1):'Hecho'}</label>`).join('')}</div>
+    <div class="inp"><div><label>Peso usado (kg)</label><input type="number" step="0.5" min="0" data-k="w" value="${esc(draft.w[i])}"></div><div><label>Reps reales</label><input type="number" min="0" data-k="r" value="${esc(draft.r[i])}"></div><div><label>RPE (1-10)</label><input type="number" min="1" max="10" step="0.5" data-k="p" value="${esc(draft.p[i])}"></div></div></div>`}).join('')+
+  `<div class="ex"><label for="feel"><strong>Sensación biomecánica</strong></label><select id="feel">${FE.map(f=>`<option ${f==draft.feel?'selected':''}>${f}</option>`).join('')}</select>
+  <div style="margin-top:10px"><label for="notes"><strong>Notas del día</strong></label><textarea id="notes" placeholder="Sensaciones generales, respiración, rodilla, muñeca…">${esc(draft.notes)}</textarea></div></div>
+  <div class="row"><button id="ssave" style="flex:2">Guardar sesión</button><button id="scopy" class="ghost" style="flex:1">Copiar resumen</button></div>`;
+}
+function go(){loadDraft();tabs();session()}
+$('#mtabs').onclick=e=>{const b=e.target.closest('[data-m]');if(!b)return;S.w=b.dataset.m*4+1;go()};
+$('#wtabs').onclick=e=>{const b=e.target.closest('[data-w]');if(!b)return;S.w=+b.dataset.w;go()};
+$('#dtabs').onclick=e=>{const b=e.target.closest('[data-d]');if(!b)return;S.d=+b.dataset.d;go()};
+$('#session').addEventListener('input',e=>{
+  const t=e.target;
+  if(t.id=='feel')return draft.feel=t.value;
+  if(t.id=='notes')return draft.notes=t.value;
+  const ex=t.closest('.ex[data-i]');if(!ex)return;const i=ex.dataset.i,k=t.dataset.k;
+  if(k=='c'){draft.c[i]=draft.c[i]||[];draft.c[i][t.dataset.j]=t.checked;const n=build(S.w,S.d)[i].s;ex.classList.toggle('done',draft.c[i].filter(Boolean).length==n)}
+  else draft[k][i]=t.value;
+});
+function summary(){
+  const ex=build(S.w,S.d),L=[`Adriana · Semana ${S.w}, Día ${S.d}: ${DAYS[S.d-1]}`];
+  ex.forEach((e,i)=>{const n=(draft.c[i]||[]).filter(Boolean).length,b=[`${n}/${e.s}`];
+    if(draft.w[i])b.push(draft.w[i]+' kg');if(draft.r[i])b.push(draft.r[i]+' reps');if(draft.p[i])b.push('RPE '+draft.p[i]);
+    L.push(`- ${e.n}: ${b.join(' · ')}`)});
+  L.push('Sensación: '+draft.feel);if((draft.notes||'').trim())L.push('Notas: '+draft.notes.trim());
+  const w=DB.weights,c=DB.metrics.cur||{},ms=KM.filter(k=>c[k]).map(k=>`${k} km ${c[k]}`);
+  L.push('Peso actual: '+(w.length?w[w.length-1].kg:78)+' kg');if(ms.length)L.push('Running: '+ms.join(' | '));
+  return L.join('\n')}
+async function copyText(t){
+  try{await navigator.clipboard.writeText(t);return true}catch(e){}
+  try{const a=document.createElement('textarea');a.value=t;a.style.cssText='position:fixed;opacity:0';document.body.appendChild(a);a.select();const ok=document.execCommand('copy');a.remove();if(ok)return true}catch(e){}
+  return false}
+$('#session').addEventListener('click',async e=>{
+  if(e.target.id=='scopy'){const t=summary();if(await copyText(t))return toast('Resumen copiado. Pégalo en WhatsApp');
+    let a=$('#fallback');if(!a){a=document.createElement('textarea');a.id='fallback';a.setAttribute('aria-label','Resumen para copiar');e.target.closest('.row').after(a)}
+    a.value=t;a.select();return toast('Copia el texto manualmente')}
+  if(e.target.id!='ssave')return;
+  DB.sessions[key()]=JSON.parse(JSON.stringify(draft));
+  toast(persist()?'Sesión guardada':'No se pudo guardar en este navegador');tabs();
+});
+drawMetrics();drawWeight();go();
+</script>
+</body></html>
